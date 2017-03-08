@@ -71,6 +71,8 @@ module.exports = function(options) {
       strCss += processRule(rule);
     } else if (rule.type === 'comment') {
       strCss += processComment(rule) + '\n\n';
+    } else if (rule.type === 'keyframes') {
+      strCss += processKeyframes(rule) + '\n\n';
     }
     return strCss;
   };
